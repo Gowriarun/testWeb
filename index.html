@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowri Arun Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main>
+        <section id="profile" class="section-content">
+            <div class="section-content-inner">
+                <div class="profile-container">
+                    <div class="about-image">
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\pfp.PNG" alt="Gowri Arun">
+                    </div>
+                    <div class="about-text">
+                        <p>Hey! I'm <b>Gowri Arun</b>, a 10th-grade student at St. Mary’s Catholic High School, Fujairah, UAE. I’m super into tech, coding, and poetry. When I’m not coding, I love writing—it’s a great way to relax and clear my mind.</p>
+                        <p>I was born in India but our family travels a lot so I've lived along middle east and africa for a long time!</p>
+                        <p>I'm prettyyy good at Python and data science, I've also picked up some HTML, C++ and JavaScript.</p>
+                        <p><b>Gowriarunn2008@gmail.com</b></p>
+                    </div>
+                </div>
+
+                <div class="certificates-container">
+                    <div class="logo-container">
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\adnoclogo.png" alt="ADNOC" class="logo" onclick="toggleCertificates('adnoc-certs')">
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\boltlogo.png" alt="Bolt" class="logo" onclick="toggleCertificates('bolt-certs')">
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\harvardlogo.png" alt="Harvard" class="logo" onclick="toggleCertificates('harvard-certs')">
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\IBMLOGO.jpg" alt="IBM" class="logo" onclick="toggleCertificates('ibm-certs')">
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\stanfordlogo.png" alt="Stanford" class="logo" onclick="toggleCertificates('stanford-certs')">
+                    </div>
+
+                    <div id="adnoc-certs" class="certification hidden">
+                        <h3>ADNOC STEM for Life Talented Youth in Industry</h3>
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\ADNOC.png" alt="ADNOC Certificate">
+                    </div>
+                    <div id="bolt-certs" class="certification hidden">
+                        <h3>Web Development (HTML, CSS, JavaScript, React.js) course by Bolt</h3>
+                        <img src="C:\Users\gowri\Documents\edits\visualStudio\Bolt.png" alt="Bolt Certificate">
+                    </div>
+                    <div id="harvard-certs" class="certification hidden">
+                        <h3>Harvard Certifications</h3>
+                        <div class="cert-img-container">
+                            <div class="cert-img">
+                                <img src="C:\Users\gowri\Documents\edits\visualStudio\harvard.png" alt="Harvard Leadership Certificate">
+                                <div class="cert-title">Exercising Leadership</div>
+                            </div>
+                            <div class="cert-img">
+                                <img src="C:\Users\gowri\Documents\edits\visualStudio\python harvard.png" alt="Harvard Python Certificate">
+                                <div class="cert-title">Introduction to Programming with Python</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ibm-certs" class="certification hidden">
+                        <h3>PY0101EN: Python Basics for Data Science (IBM through Edx)</h3>
+                        <div class="cert-img-container">
+                            <div class="cert-img">
+                                <img src="C:\Users\gowri\Documents\edits\visualStudio\IBM data science.png" alt="IBM Data Science Certificate">
+                                <div class="cert-title">Python Basics for Data Science</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="stanford-certs" class="certification hidden">
+                        <h3>Introduction to C++ (Stanford Pre-Collegiate Program)</h3>
+                        <div class="cert-img-container">
+                            <div class="cert-img">
+                                <img src="C:\Users\gowri\Documents\edits\visualStudio\Stanford.png" alt="Stanford C++ Certificate">
+                                <div class="cert-title">Introduction to C++</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="audio-player">
+            <img src="C:\Users\gowri\Documents\edits\visualStudio\albumcover.gif" alt="Album Cover" class="album-cover">
+            <p>Falling for you - peachy!</p>
+            <audio controls>
+                <source src="C:\Users\gowri\Documents\edits\visualStudio\falling for you.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Gowri Arun. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/gowri-arun-153480213/" target="_blank">
+                    <img src="C:\Users\gowri\Documents\edits\visualStudio\linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/gow.ri.ii/" target="_blank">
+                    <img src="C:\Users\gowri\Documents\edits\visualStudio\insta.png" alt="Instagram">
+                </a>
+                <a href="https://github.com/Gowriarun" target="_blank">
+                    <img src="C:\Users\gowri\Documents\edits\visualStudio\github.png" alt="GitHub">
+                </a>
+                <a href="https://replit.com/@GowriArunMenon" target="_blank">
+                    <img src="C:\Users\gowri\Documents\edits\visualStudio\replit.png" alt="Replit">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleCertificates(certId) {
+            const certs = document.querySelectorAll('.certification');
+            certs.forEach(cert => {
+                if (cert.id === certId) {
+                    cert.classList.toggle('hidden');
+                } else {
+                    cert.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
